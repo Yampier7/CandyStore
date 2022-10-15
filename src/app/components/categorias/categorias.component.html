@@ -1,0 +1,29 @@
+
+<div class="titulo">
+    <h1>Todos los dulces en un solo sitio</h1>
+</div>
+
+    <div class="grid">
+        <div class="card" *ngFor="let Product of Products">
+            <img class="image" [src]="Product.thumbnaiUrl" alt="" width="100%">
+            <div class="wrapper-text">
+                <div><h3>{{ Product.title }}</h3></div>
+                <div class="title">{{ Product.pais}}</div>
+               <div class="sub-title">S/{{ Product.precio }}</div>
+               <button class="modi" mat-raised-button color="accent">Comprar</button>
+            </div>
+       </div>
+    </div>
+
+
+   
+
+
+
+
+   
+
+    
+
+
+

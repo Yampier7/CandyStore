@@ -1,0 +1,22 @@
+<div class="body">
+    <div class="login">
+        <img class="imagen" src="../../../assets/img/usuario (1).png" width="50%">
+        <h1>Registrarse</h1>
+      
+            <mat-form-field appearance="fill" class="ancho">
+              <mat-label>correo electronico</mat-label>
+              <input matInput placeholder="pat@example.com" [formControl]="email" required>
+              <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill" class="ancho">
+                <mat-label>Contraseña</mat-label>
+                <input matInput [type]="hide ? 'password' : 'text'">
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                  <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+              </mat-form-field>
+
+              <button class="ancho" mat-raised-button color="primary">Registrarse</button>
+    </div>
+</div>

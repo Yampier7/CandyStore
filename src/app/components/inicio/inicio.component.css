@@ -1,0 +1,54 @@
+.txt{
+    position: absolute;
+    font-size: 3rem;
+    top: 40%;
+    left: 80%;
+}
+.p{
+    position: absolute;
+    font-size: 1rem;
+    top: 50%;
+    left: 72%;
+}
+
+.color{
+    color: #fff;
+}
+
+
+.re{
+    position: absolute;
+    top: 60%;
+    left: 88%;
+}
+
+button{
+    margin: 0px 20px;
+    background-color:#f57474;
+}
+
+mat-card{
+    background-color:#f57474;
+}
+
+
+
+.card1 {
+    max-width: 250px;
+    margin-bottom: 8px;
+    position: absolute;
+    left: 70%;
+}
+
+.card2 {
+    max-width: 250px;
+    margin-bottom: 8px;
+    position: absolute;
+    left: 40%;
+}
+
+.card3 {
+    max-width: 250px;
+    margin-bottom: 8px;
+    left: 10%;
+}

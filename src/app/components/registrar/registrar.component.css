@@ -1,0 +1,30 @@
+.body{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+    
+}
+
+.imagen{
+    
+    margin-left: 50px;
+}
+h1{
+    margin-left: 70px;
+}
+
+.login{
+    width: 100%;
+    max-width: 330px;
+    align-items: center;
+}
+
+.ancho{
+    width: 80%;
+}
+
+button{
+    height: 50px;
+}
