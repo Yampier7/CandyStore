@@ -1,19 +1,24 @@
-
-<div class="titulo">
-    <h1>Todos los dulces en un solo sitio</h1>
-</div>
-
-    <div class="grid">
-        <div class="card" *ngFor="let Product of Products">
-            <img class="image" [src]="Product.thumbnaiUrl" alt="" width="100%">
-            <div class="wrapper-text">
-                <div><h3>{{ Product.title }}</h3></div>
-                <div class="title">{{ Product.pais}}</div>
-               <div class="sub-title">S/{{ Product.precio }}</div>
-               <button class="modi" mat-raised-button color="accent">Comprar</button>
-            </div>
-       </div>
-    </div>
+	
+	<div class="wrap">
+		<h1>Escoge un producto</h1>
+		<div class="store-wrapper">
+			<div class="category_list">
+				<a href="#" class="category_item" category="all">Todo</a>
+				<a href="#" class="category_item" category="ordenadores">Chocolate</a>
+				<a href="#" class="category_item" category="laptops">Galletas</a>
+				<a href="#" class="category_item" category="smartphones">Caramelos</a>
+			</div>
+			<section class="products-list">
+				<div class="product-item" *ngFor="let Product of Products; let element" category="laptops">
+					<img [src]="Product.thumbnaiUrl" alt="" >
+					<a>{{Product.title}}</a>
+                    <a>{{Product.pais}}</a>
+                    <a>S/{{Product.precio}}</a>
+                    <a href="/categorias" (click)="saveProduct(element)">Comprar</a>
+				</div>
+			</section>
+		</div>
+	</div>
 
 
    

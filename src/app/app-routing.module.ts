@@ -1,3 +1,4 @@
+import { CarritoComponent } from './components/carrito/carrito.component';
 import { RegistrarComponent } from './components/registrar/registrar.component';
 
 import { LoginComponent } from './components/login/login.component';
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path:'faqs', component:FaqsComponent},
   {path:'login', component:LoginComponent},
   {path:'registro', component: RegistrarComponent},
+  {path:'carrito', component:CarritoComponent},
   {path:'', redirectTo:'inicio', pathMatch:'full'}
 ];
 

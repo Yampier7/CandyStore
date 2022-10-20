@@ -1,114 +1,111 @@
 {
-    "products":[
-        {
-            "id": 1,
-            "title": "Galleta de la fortuna",
-            "precio": "16",
-            "pais": "Estados Unidos",
-            "thumbnaiUrl": "https://t1.uc.ltmcdn.com/es/posts/4/8/8/como_hacer_galletas_de_la_fortuna_51884_orig.jpg"
-        },
-        
-        {
-            "id": 2,
-            "title": "bises",
-            "precio": "10",
-            "pais":"Japon",
-            "thumbnaiUrl": "https://cdn.shopify.com/s/files/1/1083/2612/articles/unnamed_3926193b-c9c7-4719-a2eb-786bcc4416d3_3000x.jpg?v=1568742129"
-
-        },
-
-        {
-            "id": 3,
-            "title": "Kaki no Tane",
-            "precio": "10",
-            "pais":"Japon",
-            "thumbnaiUrl": "https://cdn.shopify.com/s/files/1/1969/5775/products/Kameda-Kakinotane-Snack-Rice-Crackers-with-Peanuts-190g-Japanese-Taste_91cbf589-ccee-4010-99d6-f23744fa5373.jpg?v=1628851430&width=5760"
-
-        },
-
-        {
-            "id": 4,
-            "title": "Lays Algas",
-            "precio": "5",
-            "pais":"Japon",
-            "thumbnaiUrl": "https://ae01.alicdn.com/kf/HTB13ll6LVXXXXb.XpXXq6xXFXXXX/Env-o-libre-Alimentos-1-pack-40-gramps-Algas-sabor-Aperitivos-Patatas-fritas-Delicioso-comida-china.jpg"
-
-        },
-
-        {
-            "id": 5,
-            "title": "Algas fritas",
-            "precio": "5",
-            "pais":"Japon",
-            "thumbnaiUrl": "https://m.media-amazon.com/images/I/51sQDwKFjyL._AC_SY580_.jpg"
-
-        },
-
-        {
-            "id": 6,
-            "title": "Umaibo",
-            "precio": "5",
-            "pais":"Japon",
-            "thumbnaiUrl": "https://www.japonalternativo.com/wp-content/uploads/2020/08/umaibo-sabores-japoneses-768x527.jpg"
-
-        },
-
-        {
-            "id": 7,
-            "title": "Anpan",
-            "precio": "5",
-            "pais":"Japon",
-            "thumbnaiUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Anpan_001.jpg"
-
-        },
-
-        {
-            "id": 8,
-            "title": "Doña Pepa",
-            "precio": "15",
-            "pais":"Perú",
-            "thumbnaiUrl": "https://m.media-amazon.com/images/I/71b+bAgS93L.jpg"
-
-        },
-
-        {
-            "id": 9,
-            "title": "Galleta Amor",
-            "precio": "5",
-            "pais":"Perú",
-            "thumbnaiUrl": "https://www.america-retail.com/static//2022/06/galletas-amor.png"
-
-        },
-
-        {
-            "id": 10,
-            "title": "Morochas",
-            "precio": "5",
-            "pais":"Perú",
-            "thumbnaiUrl": "https://www.tienda-peruana.com/2851-tm_home_default/morochas-clasicas-nestle.jpg"
-
-        },
-
-        {
-            "id": 11,
-            "title": "Inka Kola",
-            "precio": "5",
-            "pais":"Perú",
-            "thumbnaiUrl": "https://elpozito.com.pe/tienda/dosdemayo/wp-content/uploads/2020/07/311802.jpg"
-
-        },
-
-        {
-            "id": 12,
-            "title": "Cool",
-            "precio": "5",
-            "pais":"Perú",
-            "thumbnaiUrl": "https://i0.wp.com/eyng.pe/web/wp-content/uploads/2021/09/COOL.jpeg?fit=1104%2C1129&ssl=1"
-
-        }
-
-
-
-
-    ]
+  "products": [
+    {
+      "id": 1,
+      "title": "Galleta de la fortuna",
+      "precio": 16,
+      "pais": "Estados Unidos",
+      "thumbnaiUrl": "https://t1.uc.ltmcdn.com/es/posts/4/8/8/como_hacer_galletas_de_la_fortuna_51884_orig.jpg"
+    },
+    {
+      "id": 2,
+      "title": "bises",
+      "precio": 10,
+      "pais": "Japon",
+      "thumbnaiUrl": "https://cdn.shopify.com/s/files/1/1083/2612/articles/unnamed_3926193b-c9c7-4719-a2eb-786bcc4416d3_3000x.jpg?v=1568742129"
+    },
+    {
+      "id": 3,
+      "title": "Kaki no Tane",
+      "precio": 10,
+      "pais": "Japon",
+      "thumbnaiUrl": "https://cdn.shopify.com/s/files/1/1969/5775/products/Kameda-Kakinotane-Snack-Rice-Crackers-with-Peanuts-190g-Japanese-Taste_91cbf589-ccee-4010-99d6-f23744fa5373.jpg?v=1628851430&width=5760"
+    },
+    {
+      "id": 4,
+      "title": "Lays Algas",
+      "precio": 5,
+      "pais": "Japon",
+      "thumbnaiUrl": "https://ae01.alicdn.com/kf/HTB13ll6LVXXXXb.XpXXq6xXFXXXX/Env-o-libre-Alimentos-1-pack-40-gramps-Algas-sabor-Aperitivos-Patatas-fritas-Delicioso-comida-china.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Algas fritas",
+      "precio": 5,
+      "pais": "Japon",
+      "thumbnaiUrl": "https://m.media-amazon.com/images/I/51sQDwKFjyL._AC_SY580_.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Umaibo",
+      "precio": 5,
+      "pais": "Japon",
+      "thumbnaiUrl": "https://www.japonalternativo.com/wp-content/uploads/2020/08/umaibo-sabores-japoneses-768x527.jpg"
+    },
+    {
+      "id": 7,
+      "title": "Anpan",
+      "precio": 5,
+      "pais": "Japon",
+      "thumbnaiUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Anpan_001.jpg"
+    },
+    {
+      "id": 8,
+      "title": "Doña Pepa",
+      "precio": 15,
+      "pais": "Perú",
+      "thumbnaiUrl": "https://m.media-amazon.com/images/I/71b+bAgS93L.jpg"
+    },
+    {
+      "id": 9,
+      "title": "Galleta Amor",
+      "precio": 5,
+      "pais": "Perú",
+      "thumbnaiUrl": "https://www.america-retail.com/static//2022/06/galletas-amor.png"
+    },
+    {
+      "id": 10,
+      "title": "Morochas",
+      "precio": 5,
+      "pais": "Perú",
+      "thumbnaiUrl": "https://www.tienda-peruana.com/2851-tm_home_default/morochas-clasicas-nestle.jpg"
+    },
+    {
+      "id": 11,
+      "title": "Inka Kola",
+      "precio": 5,
+      "pais": "Perú",
+      "thumbnaiUrl": "https://elpozito.com.pe/tienda/dosdemayo/wp-content/uploads/2020/07/311802.jpg"
+    },
+    {
+      "id": 12,
+      "title": "Cool",
+      "precio": 5,
+      "pais": "Perú",
+      "thumbnaiUrl": "https://i0.wp.com/eyng.pe/web/wp-content/uploads/2021/09/COOL.jpeg?fit=1104%2C1129&ssl=1"
+    }
+  ],
+  "carts": [
+    {
+      "id": 4,
+      "title": "Lays Algas",
+      "precio": 5,
+      "pais": "Japon",
+      "thumbnaiUrl": "https://ae01.alicdn.com/kf/HTB13ll6LVXXXXb.XpXXq6xXFXXXX/Env-o-libre-Alimentos-1-pack-40-gramps-Algas-sabor-Aperitivos-Patatas-fritas-Delicioso-comida-china.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Kaki no Tane",
+      "precio": 10,
+      "pais": "Japon",
+      "thumbnaiUrl": "https://cdn.shopify.com/s/files/1/1969/5775/products/Kameda-Kakinotane-Snack-Rice-Crackers-with-Peanuts-190g-Japanese-Taste_91cbf589-ccee-4010-99d6-f23744fa5373.jpg?v=1628851430&width=5760"
+    },
+    {
+      "id": 12,
+      "title": "Cool",
+      "precio": 5,
+      "pais": "Perú",
+      "thumbnaiUrl": "https://i0.wp.com/eyng.pe/web/wp-content/uploads/2021/09/COOL.jpeg?fit=1104%2C1129&ssl=1"
+    }
+  ]
 }

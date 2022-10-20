@@ -1,0 +1,31 @@
+  table {
+    width: 80%;
+    margin-left: 6rem;
+  }
+  
+  .card{
+    margin-top: 1rem;
+    background-color: #F08080;
+    width: 70%;
+    margin-bottom: 1rem;
+    margin-left: 9rem;
+  }
+
+  tr.mat-footer-row {
+    font-weight: bold;
+  }
+
+  .imagen{
+    width: 10rem;
+    height: 6rem;
+    object-fit: cover;
+  }
+ 
+
+.titulo{
+  
+  margin-top: 32px;
+    margin-left: 40%;
+    margin-bottom: 32px;
+  
+}

@@ -14,6 +14,7 @@ import { FaqsComponent } from './components/faqs/faqs.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegistrarComponent } from './components/registrar/registrar.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { CarritoComponent } from './components/carrito/carrito.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { FooterComponent } from './components/footer/footer.component';
     FaqsComponent,
     LoginComponent,
     RegistrarComponent,
-    FooterComponent
+    FooterComponent,
+    CarritoComponent
   ],
   imports: [
     BrowserModule,
