@@ -1,3 +1,7 @@
+import { PerfilComponent } from './components/perfil/perfil.component';
+import { CompradorComponent } from './components/comprador/comprador.component';
+
+
 import { CarritoComponent } from './components/carrito/carrito.component';
 import { RegistrarComponent } from './components/registrar/registrar.component';
 
@@ -11,12 +15,15 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {path:'inicio', component:InicioComponent},
-  {path:'categorias', component:CategoriasComponent},
-  {path:'faqs', component:FaqsComponent},
+  {path:'home', component:CompradorComponent},
+  {path:'home/categorias', component:CategoriasComponent},
+  {path:'home/faqs', component:FaqsComponent},
   {path:'login', component:LoginComponent},
   {path:'registro', component: RegistrarComponent},
-  {path:'carrito', component:CarritoComponent},
+  {path:'home/carrito', component:CarritoComponent},
+  {path:'home/perfil', component:PerfilComponent},
   {path:'', redirectTo:'inicio', pathMatch:'full'}
+
 ];
 
 @NgModule({

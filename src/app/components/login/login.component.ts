@@ -1,5 +1,11 @@
+import { environment } from './../../../environments/environment';
+import { User } from './../../models/user';
+import { Router } from '@angular/router';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { HttpClient } from '@angular/common/http';
+import { UserService } from './../../services/user.service';
 import { Component, OnInit } from '@angular/core';
-import {FormControl, Validators} from '@angular/forms';
+import { FormControl, Validators, FormGroup, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -7,20 +13,30 @@ import {FormControl, Validators} from '@angular/forms';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  email = new FormControl('', [Validators.required, Validators.email]);
+  
   hide = true;
+  myForm!: FormGroup;
+  user!:User;
+  
 
-  constructor() { }
+  constructor(
+    private fb:FormBuilder, 
+    private userServices: UserService,
+    private snackBar: MatSnackBar,
+    private router:Router,
+  ) { }
 
   ngOnInit(): void {
+    this.reactiveForm();
   }
 
-  getErrorMessage() {
-    if (this.email.hasError('required')) {
-      return 'ingrese un email';
-    }
-
-    return this.email.hasError('email') ? 'Not a valid email' : '';
+  reactiveForm() {
+    this.myForm = this.fb.group({
+      correo: ['',[Validators.required, Validators.email]],
+      contrasenia: ['',[Validators.required]],
+    });
   }
+ 
+
 
 }

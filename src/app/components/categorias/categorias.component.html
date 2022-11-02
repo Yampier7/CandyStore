@@ -1,20 +1,22 @@
-	
+	<app-comprador></app-comprador>
 	<div class="wrap">
 		<h1>Escoge un producto</h1>
 		<div class="store-wrapper">
+			<!--
 			<div class="category_list">
-				<a href="#" class="category_item" category="all">Todo</a>
-				<a href="#" class="category_item" category="ordenadores">Chocolate</a>
-				<a href="#" class="category_item" category="laptops">Galletas</a>
-				<a href="#" class="category_item" category="smartphones">Caramelos</a>
+				<a href="/categorias" class="category_item" >Todo</a>
+				<a href="/categorias/chocolate" class="category_item">Chocolate</a>
+				<a href="/categorias/galletas" class="category_item" >Galletas</a>
+				<a href="/categorias/caramelos" class="category_item" >Caramelos</a>
 			</div>
+			-->
 			<section class="products-list">
-				<div class="product-item" *ngFor="let Product of Products; let element" category="laptops">
+				<div class="product-item" *ngFor="let Product of Products; let element">
 					<img [src]="Product.thumbnaiUrl" alt="" >
 					<a>{{Product.title}}</a>
                     <a>{{Product.pais}}</a>
                     <a>S/{{Product.precio}}</a>
-                    <a href="/categorias" (click)="saveProduct(element)">Comprar</a>
+					<button class="color" mat-raised-button (click)="saveProduct(element)">Comprar</button>
 				</div>
 			</section>
 		</div>

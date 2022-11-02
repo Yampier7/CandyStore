@@ -21,8 +21,6 @@ export class CategoriasComponent implements OnInit {
   idProduct: any;
   
 
-  public imagen!:string;
-
   Products!:Product[];
   
 
@@ -49,10 +47,12 @@ export class CategoriasComponent implements OnInit {
       id: [''],
       title: [''],
       thumbnaiUrl: [''],
+      categoria: [''],
       pais: [''],
       precio: [''],
     });
   }
+
 
   saveProduct(cart:Cart){
      

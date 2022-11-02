@@ -1,5 +1,9 @@
+import { User } from './../../models/user';
+import { Router } from '@angular/router';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { UserService } from './../../services/user.service';
 import { Component, OnInit } from '@angular/core';
-import {FormControl, Validators} from '@angular/forms';
+import { FormControl, Validators, FormGroup, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-registrar',
@@ -8,18 +12,51 @@ import {FormControl, Validators} from '@angular/forms';
 })
 export class RegistrarComponent implements OnInit {
 
-  email = new FormControl('', [Validators.required, Validators.email]);
+  myForm!: FormGroup;
   hide = true;
-  constructor() { }
+  id: any;
+
+  constructor(
+    private fb: FormBuilder,
+    private userServices:UserService,
+    private snackBar: MatSnackBar,
+    private router: Router,
+  ) { }
 
   ngOnInit(): void {
+    this.reactiveForm();
   }
 
-  getErrorMessage() {
-    if (this.email.hasError('required')) {
-      return 'ingrese un email';
-    }
-
-    return this.email.hasError('email') ? 'Not a valid email' : '';
+  reactiveForm() {
+    this.myForm = this.fb.group({
+      
+      nombre: ['',[Validators.required, Validators.maxLength(20)]],
+      apellido: ['',[Validators.required]],
+      correo: ['',[Validators.required, Validators.email]],
+      contrasenia: ['',[Validators.required]],
+    });
   }
+  
+  saveUser(): void {
+    const user: User = {
+      id: this.id,
+      nombre: this.myForm.get('nombre')!.value,
+      apellido: this.myForm.get('apellido')!.value,
+      correo: this.myForm.get('correo')!.value,
+      contrasenia: this.myForm.get('contrasenia')!.value,
+    };
+    this.userServices.addUser(user)
+      .subscribe({
+        next: (data) => {
+          this.snackBar.open('Registro Exitoso', '', {
+            duration: 6000,
+          });
+          this.router.navigate(['/login']);
+        },
+        error: (err) => {
+          console.log(err);
+        },
+      });
+  }
+
 }

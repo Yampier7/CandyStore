@@ -1,22 +1,82 @@
+<app-navbar></app-navbar>
 <div class="body">
     <div class="login">
         <img class="imagen" src="../../../assets/img/usuario (1).png" width="50%">
         <h1>Registrarse</h1>
-      
-            <mat-form-field appearance="fill" class="ancho">
-              <mat-label>correo electronico</mat-label>
-              <input matInput placeholder="pat@example.com" [formControl]="email" required>
-              <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
-            </mat-form-field>
+        
+        <form [formGroup]="myForm" autocomplete="off">
 
-            <mat-form-field appearance="fill" class="ancho">
-                <mat-label>Contraseña</mat-label>
-                <input matInput [type]="hide ? 'password' : 'text'">
-                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-                  <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-                </button>
-              </mat-form-field>
+          <div>
+          <mat-form-field appearance="fill" class="ancho">
+            <mat-label>nombre</mat-label>
+            <input matInput placeholder="Ingrese su nombre" formControlName="nombre" />
+          </mat-form-field>
+          <div
+          *ngIf="
+           myForm.get('nombre')?.hasError('required') &&
+          myForm.get('nombre')?.touched
+          "
+          style="margin-top: -20px"
+        >
+        <span class="mda-form-msg">Este elemento es requerido </span>
+        </div>
+          </div>
+          <div>
+          <mat-form-field appearance="fill" class="ancho">
+            <mat-label>apellido</mat-label>
+            <input formControlName="apellido" matInput placeholder="Ingrese su apellido" />
+          </mat-form-field>
+          <div
+          *ngIf="
+           myForm.get('apellido')?.hasError('required') &&
+          myForm.get('apellido')?.touched
+          "
+          style="margin-top: -20px"
+            >
+            <span class="mda-form-msg">Este elemento es requerido </span>
+            </div>
+          </div>
 
-              <button class="ancho" mat-raised-button color="primary">Registrarse</button>
+          <div>
+                <mat-form-field appearance="fill" class="ancho">
+                  <mat-label>correo electronico</mat-label>
+                  <input formControlName="correo" matInput placeholder="pat@example.com">
+                </mat-form-field>
+                <div
+                  *ngIf="
+                   myForm.get('correo')?.hasError('required') &&
+                  myForm.get('correo')?.touched
+                  "
+                  style="margin-top: -20px"
+                >
+                <span class="mda-form-msg">Este elemento es requerido </span>
+                </div>
+              </div>
+    
+  
+              <div>
+              <mat-form-field appearance="fill" class="ancho">
+                  <mat-label>Contraseña</mat-label>
+                  <input formControlName="contrasenia" matInput [type]="hide? 'password' : 'text'">
+                  <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                  </button>
+                </mat-form-field>
+                <div
+                *ngIf="
+                 myForm.get('contrasenia')?.hasError('required') &&
+                myForm.get('contrasenia')?.touched
+                "
+                style="margin-top: -20px"
+              >
+              <span class="mda-form-msg">Este elemento es requerido </span>
+              </div>
+              </div>
+                <button class="ancho" mat-raised-button
+                [disabled]="myForm.invalid"
+                color="primary" (click)="saveUser()"
+                >Registrarse</button>
+        </form>
     </div>
 </div>
+

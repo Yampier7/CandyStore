@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ProductService {
   baseUrl: string = environment.basePath;
- 
+
 
   constructor(private http: HttpClient) { }
 
@@ -22,5 +22,9 @@ export class ProductService {
     return this.http.get<Product>(`${this.baseUrl}/${id}`);
   }
 
-  
+  getProductoCategoria(chocolate:string){
+    return this.http.get<Product>(`${this.baseUrl}/${chocolate}`)
+  }
+
+
 }

@@ -11,6 +11,10 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSliderModule } from '@angular/material/slider';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatListModule} from '@angular/material/list';
 
 @NgModule({
   declarations: [],
@@ -27,6 +31,11 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     MatTableModule,
     MatPaginatorModule,
     MatSnackBarModule,
+    MatSliderModule,
+    BrowserAnimationsModule,
+    MatDividerModule,
+    MatListModule,
+    
   ],
 
   exports: [
@@ -40,6 +49,10 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     MatTableModule,
     MatPaginatorModule,
     MatSnackBarModule,
+    MatSliderModule,
+    BrowserAnimationsModule,
+    MatDividerModule,
+    MatListModule,
   ]
 
 })
