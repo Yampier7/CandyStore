@@ -17,6 +17,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { CarritoComponent } from './components/carrito/carrito.component';
 import { PerfilComponent } from './components/perfil/perfil.component';
 import { CompradorComponent } from './components/comprador/comprador.component';
+import { EditComponent } from './components/edit/edit.component';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { CompradorComponent } from './components/comprador/comprador.component';
     CarritoComponent,
     PerfilComponent,
     CompradorComponent,
+    EditComponent,
 
 
   ],

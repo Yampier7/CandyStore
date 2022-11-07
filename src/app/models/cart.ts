@@ -4,5 +4,6 @@ export interface Cart{
     precio: number;
     pais:   string;
     categoria: string;
-    thumbnaiUrl: string;
+    url: string;
+
 }

@@ -2,9 +2,9 @@
 <div class="body">
     <div class="login">
         <img class="imagen" src="../../../assets/img/usuario (1).png" width="50%">
-        <h1>Registrarse</h1>
+        <h1>Login</h1>
         
-        <form [formGroup]="myForm" autocomplete="off">
+        <form [formGroup]="myForm" autocomplete="off" (ngSubmit)="login()">
 
           <div>
                 <mat-form-field appearance="fill" class="ancho">
@@ -41,7 +41,7 @@
               <span class="mda-form-msg">Este elemento es requerido </span>
               </div>
               </div>
-                <button class="ancho" mat-raised-button
+                <button type="submit" class="ancho" mat-raised-button
                 [disabled]="myForm.invalid"
                 color="primary"
                 >Ingresar</button>

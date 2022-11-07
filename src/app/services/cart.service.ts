@@ -9,23 +9,23 @@ import { Cart } from './../models/cart';
 })
 export class CartService {
   
-  baseUrl:string=environment.baseUrl;
+  baseUrl:string=environment.basePath1;
 
   constructor(private http: HttpClient) { }
 
   getCars() {
-    return this.http.get<Cart[]>(this.baseUrl);
+    return this.http.get<Cart[]>(`${this.baseUrl}details`);
   }
 
   addProduct(cart: Cart) {
-    return this.http.post<Cart>(this.baseUrl, cart);
+    return this.http.post<Cart>(`${this.baseUrl}details`, cart);
   }
 
   getCarId(id: any) {
-    return this.http.get<Cart>(`${this.baseUrl}/${id}`);
+    return this.http.get<Cart>(`${this.baseUrl}details/${id}`);
   }
 
   deleteCart(id: any) {
-    return this.http.delete<Cart>(`${this.baseUrl}/${id}`);
+    return this.http.delete<Cart>(`${this.baseUrl}details/${id}`);
   }
 }

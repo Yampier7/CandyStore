@@ -8,22 +8,22 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ProductService {
-  baseUrl: string = environment.basePath;
+  baseUrl: string = environment.basePath1;
 
 
   constructor(private http: HttpClient) { }
 
   getProducts() {
-    return this.http.get<Product[]>(this.baseUrl);
+    return this.http.get<Product[]>(`${this.baseUrl}products`);
   }
-
+  
 
   getProductId(id: any) {
-    return this.http.get<Product>(`${this.baseUrl}/${id}`);
+    return this.http.get<Product>(`${this.baseUrl}products/${id}`);
   }
 
   getProductoCategoria(chocolate:string){
-    return this.http.get<Product>(`${this.baseUrl}/${chocolate}`)
+    return this.http.get<Product>(`${this.baseUrl}products/${chocolate}`)
   }
 
 

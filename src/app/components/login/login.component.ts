@@ -17,7 +17,8 @@ export class LoginComponent implements OnInit {
   hide = true;
   myForm!: FormGroup;
   user!:User;
-  
+  id:any;
+  idUser!:any;
 
   constructor(
     private fb:FormBuilder, 
@@ -37,6 +38,27 @@ export class LoginComponent implements OnInit {
     });
   }
  
-
+  login(){
+    this.userServices.getUsers()
+    .subscribe(res=>{
+      const user = res.find((a:any)=>{
+        return a.correo === this.myForm.value.correo && a.contrasenia === this.myForm.value.contrasenia
+      });
+      if(user){
+        this.snackBar.open('Login correcto!', '', {
+          duration: 6000,
+        });
+        this.myForm.reset();
+        this.router.navigate(['home/perfil',user.id]);
+        this.idUser=user.id
+      }else{
+        this.snackBar.open('Correo o/y contraseña erronea!', '', {
+          duration: 6000,
+        });
+      }
+    },err=>{
+      alert("No eres tu, somo nosotros!")
+    })
+  }
 
 }

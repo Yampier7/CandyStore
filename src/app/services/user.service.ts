@@ -7,17 +7,32 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class UserService {
-  base1: string= environment.base1;
-
+  basePath: string= environment.basePath1;
+  
   constructor(private http: HttpClient) { }
 
   addUser(user: User){
-    return this.http.post<User>(this.base1, user);
+    return this.http.post<User>(`${this.basePath}users`, user);
   }
 
   getUsers() {
-    return this.http.get<User[]>(this.base1);
+    return this.http.get<User[]>(`${this.basePath}users`);
   }
+
+  getVerificar(id: any) {
+    return this.http.get<User>(`${this.basePath}users/${id}`);
+  }
+
+  updateUser(id: any, user: User) {
+    return this.http.put<User>(`${this.basePath}users/${id}`, user);
+  }
+
+  getUserId(id:any){
+    return this.http.get<User>(`${this.basePath}users/${id}`);
+  }
+
+  
+
 
   
   

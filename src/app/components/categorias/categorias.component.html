@@ -12,7 +12,7 @@
 			-->
 			<section class="products-list">
 				<div class="product-item" *ngFor="let Product of Products; let element">
-					<img [src]="Product.thumbnaiUrl" alt="" >
+					<img [src]="Product.url" alt="" >
 					<a>{{Product.title}}</a>
                     <a>{{Product.pais}}</a>
                     <a>S/{{Product.precio}}</a>

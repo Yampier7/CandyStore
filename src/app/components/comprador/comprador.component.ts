@@ -1,3 +1,4 @@
+import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CompradorComponent implements OnInit {
 
-  constructor() { }
+  id:any;
+  user!:number;
+  constructor(
+    public route:ActivatedRoute, 
+  ) { }
 
   ngOnInit(): void {
+    const variable = this.route.snapshot.paramMap.get('id');
+    console.log("Perfil "+ variable)
+    this.id=variable;
   }
 
 }

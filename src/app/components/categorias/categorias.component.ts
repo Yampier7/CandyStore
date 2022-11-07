@@ -46,7 +46,7 @@ export class CategoriasComponent implements OnInit {
     this.myForm = this.fb.group({
       id: [''],
       title: [''],
-      thumbnaiUrl: [''],
+      url: [''],
       categoria: [''],
       pais: [''],
       precio: [''],

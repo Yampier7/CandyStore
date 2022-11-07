@@ -30,7 +30,7 @@ export class RegistrarComponent implements OnInit {
   reactiveForm() {
     this.myForm = this.fb.group({
       
-      nombre: ['',[Validators.required, Validators.maxLength(20)]],
+      title: ['',[Validators.required, Validators.maxLength(20)]],
       apellido: ['',[Validators.required]],
       correo: ['',[Validators.required, Validators.email]],
       contrasenia: ['',[Validators.required]],
@@ -40,7 +40,7 @@ export class RegistrarComponent implements OnInit {
   saveUser(): void {
     const user: User = {
       id: this.id,
-      nombre: this.myForm.get('nombre')!.value,
+      title: this.myForm.get('title')!.value,
       apellido: this.myForm.get('apellido')!.value,
       correo: this.myForm.get('correo')!.value,
       contrasenia: this.myForm.get('contrasenia')!.value,
