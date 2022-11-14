@@ -1,5 +1,8 @@
+import { User } from './../../models/user';
+import { PerfilComponent } from './../perfil/perfil.component';
 import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-comprador',
@@ -8,16 +11,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CompradorComponent implements OnInit {
 
-  id:any;
-  user!:number;
+  idUser:any;
+  variable!:number;
   constructor(
-    public route:ActivatedRoute, 
+    public route:ActivatedRoute,
   ) { }
 
   ngOnInit(): void {
-    const variable = this.route.snapshot.paramMap.get('id');
-    console.log("Perfil "+ variable)
-    this.id=variable;
+    const aux= this.route.snapshot.paramMap.get('id');
+    this.idUser=aux;  
   }
 
 }

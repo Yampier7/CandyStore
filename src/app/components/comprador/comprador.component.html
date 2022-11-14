@@ -1,20 +1,25 @@
-<mat-toolbar> 
-    <mat-toolbar-row>
-        <span>
-            <img src="../../../assets/img/LOGO.png" alt="CandyStore Logo">
-        </span>
-        <span class="example-spacer"></span>
-        <button class="color" mat-raised-button [routerLink]="'/categorias'">Categorias</button>
-        <button class="color" mat-raised-button [routerLink]="'/faqs'">FAQ'S</button>
-        <span><a routerLink="/home/perfil{{id}}">
-            <img  class="user" src="../../../assets/img/users.png" alt="">
-        </a>
-        </span>
-        <button [routerLink]="'/carrito'" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-            <mat-icon>shopping_cart</mat-icon>
-        </button>
-        
-    </mat-toolbar-row>
-</mat-toolbar>
 
+        <div class="content">
+            <div class="toolbar">
+                <mat-toolbar>
+            
+                    <span>
+                        <img src="../../../assets/img/LOGO.png" alt="CandyStore Logo">
+                    </span>
 
+                    <span class="example-spacer"></span>
+                    <button class="color" mat-raised-button routerLink="/home/categorias/{{idUser}}">Categorias</button>
+                    <button class="color" mat-raised-button routerLink="/home/faqs/{{idUser}}">FAQ'S</button>
+                    <span><a routerLink="/home/perfil/{{idUser}}">
+                        <img  class="user" src="../../../assets/img/users.png" alt="">
+                    </a>
+                    </span>
+
+                    <button routerLink="/home/carrito/{{idUser}}" mat-icon-button >
+                        <mat-icon>shopping_cart</mat-icon>
+                    </button>
+                    
+                </mat-toolbar>
+            </div>
+        </div>
+    

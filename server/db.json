@@ -109,11 +109,18 @@
   ],
   "users": [
     {
+      "id": 1,
+      "title": "Jose",
+      "apellido": "Florez",
+      "correo": "jose@gmail.com",
+      "contrasenia": "12345"
+    },
+    {
+      "id": 2,
       "nombre": "Edy",
       "apellido": "Maza",
       "correo": "eddy@gmail.com",
-      "contrasenia": "12345",
-      "id": 1
+      "contrasenia": "12345"
     }
   ]
 }

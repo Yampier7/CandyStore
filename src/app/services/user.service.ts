@@ -8,6 +8,7 @@ import { Injectable } from '@angular/core';
 })
 export class UserService {
   basePath: string= environment.basePath1;
+
   
   constructor(private http: HttpClient) { }
 
@@ -18,18 +19,18 @@ export class UserService {
   getUsers() {
     return this.http.get<User[]>(`${this.basePath}users`);
   }
-
+  
   getVerificar(id: any) {
     return this.http.get<User>(`${this.basePath}users/${id}`);
   }
-
+  
   updateUser(id: any, user: User) {
     return this.http.put<User>(`${this.basePath}users/${id}`, user);
   }
 
-  getUserId(id:any){
-    return this.http.get<User>(`${this.basePath}users/${id}`);
-  }
+
+
+  
 
   
 

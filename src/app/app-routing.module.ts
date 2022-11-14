@@ -18,13 +18,13 @@ const routes: Routes = [
   
   {path:'inicio', component:InicioComponent},
   {path:'home/:id', component:CompradorComponent},
-  {path:'categorias', component:CategoriasComponent},
-  {path:'faqs', component:FaqsComponent},
+  {path:'home/categorias/:id', component:CategoriasComponent},
+  {path:'home/faqs/:id', component:FaqsComponent},
   {path:'login', component:LoginComponent},
   {path:'registro', component: RegistrarComponent},
-  {path:'carrito', component:CarritoComponent},
+  {path:'home/carrito/:id', component:CarritoComponent},
   {path:'home/perfil/:id', component:PerfilComponent},
-  {path:'home/perfil/edit/:id', component:EditComponent},
+  {path:'edit/:id', component:EditComponent},
   {path:'', redirectTo:'inicio', pathMatch:'full'}
 
 

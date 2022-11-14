@@ -77,3 +77,84 @@ a{
 mat-divider{
     background-color: #fff;
 }
+
+.contenedor{
+	position: absolute;
+	width: 510px;
+    height: 459px;
+	left: 565px;
+    top: 171px;
+
+background: #F08080;
+}
+
+.bloque{
+	position: absolute;
+	width: 342px;
+	height: 62px;
+	left: 77px;
+	top: 90px;
+	background: #FBC4AB;
+
+}
+
+.bloque1{
+	position: absolute;
+	width: 342px;
+	height: 62px;
+	left: 77px;
+	top: 212px;
+	background: #FBC4AB;
+}
+
+.bloque2{
+	position: absolute;
+	width: 342px;
+	height: 62px;
+	left: 77px;
+	top: 328px;
+	background: #FBC4AB;
+}
+
+.nombre{
+	position: absolute;
+	width: 220px;
+    height: 39px;
+    left: 38px;
+    top: 14px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 28px;
+line-height: 39px;
+
+}
+
+.correo{
+	position: absolute;
+	width: 296px;
+    height: 39px;
+    left: 27px;
+top: 15px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 28px;
+line-height: 39px;
+}
+
+.contra{
+	position: absolute;
+	width: 232px;
+    height: 39px;
+    left: 45px;
+top: 14px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 28px;
+line-height: 39px;
+}

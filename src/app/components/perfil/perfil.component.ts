@@ -18,18 +18,12 @@ export class PerfilComponent implements OnInit {
   apellido!: string;
   title!: string;
   correo!:string;
-  contrasenia!:string;
+  contra!:string;
   user!:User;
+  
 
-  users!:User[];
+  
 
-  dataSource = new MatTableDataSource<User>();
-  displayedColumns: string[] = [
-    'title',
-    'apellido',  
-    'correo',
-    'contrasenia',
-  ];
   constructor(
     private fb: FormBuilder,
     public route:ActivatedRoute,
@@ -37,20 +31,19 @@ export class PerfilComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.idUser = this.route.snapshot.paramMap.get('id');
-    console.log("haber"+this.idUser);
-    this.userService.getUserId(this.idUser).subscribe((data) => {
-      this.user = data;
-      this.myForm = this.fb.group({
-        id: this.idUser,
-        title: [
-          this.user.title
-        ],
-        apellido: [this.user.apellido],
-        correo: [this.user.correo],
-        contrasenia: [this.user.contrasenia],
-      });
-    });
+    this.loadUser();   
   }
 
+  loadUser() {
+    const aux = this.route.snapshot.paramMap.get('id');
+    console.log("sidenav "+ aux)
+    this.idUser = aux;
+    this.userService.getVerificar(this.idUser).subscribe((data) => {
+      this.user=data;
+      this.title = this.user.title+' '+this.user.apellido;
+      this.correo=this.user.correo;
+      this.contra=this.user.contrasenia;
+      
+    }) 
+  }
 }

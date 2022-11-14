@@ -15,6 +15,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatListModule} from '@angular/material/list';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 @NgModule({
   declarations: [],
@@ -35,7 +36,7 @@ import {MatListModule} from '@angular/material/list';
     BrowserAnimationsModule,
     MatDividerModule,
     MatListModule,
-    
+    MatSidenavModule,
   ],
 
   exports: [
@@ -53,6 +54,7 @@ import {MatListModule} from '@angular/material/list';
     BrowserAnimationsModule,
     MatDividerModule,
     MatListModule,
+    MatSidenavModule,
   ]
 
 })
