@@ -1,6 +1,7 @@
 	<app-comprador></app-comprador>
 	<div class="wrap">
 		<h1>Escoge un producto</h1>
+		
 		<div class="store-wrapper">
 			<!--
 			<div class="category_list">
@@ -10,13 +11,43 @@
 				<a href="/categorias/caramelos" class="category_item" >Caramelos</a>
 			</div>
 			-->
+			<mat-card-header>
+				<div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
+				  <ul fxLayout="row" fxLayoutGap="20px">
+					<li>
+					  <button
+						mat-raised-button
+						color="accent"
+						[routerLink]="['/new',route.snapshot.paramMap.get('id')]"
+					  >
+						Agregar Producto
+					  </button>
+					</li>
+					<li class="li">
+					  <button
+						mat-button
+						mat-raised-button
+						color="accent"
+						(click)="exportExcel()"
+					  >
+						Exportar Excel
+					  </button>
+					</li>
+				  </ul>
+				</div>
+			</mat-card-header>
+
 			<section class="products-list">
 				<div class="product-item" *ngFor="let Product of Products; let element">
-					<img [src]="Product.url" alt="" >
+					<img [src]="Product.picture" alt="" >
 					<a>{{Product.title}}</a>
                     <a>{{Product.pais}}</a>
                     <a>S/{{Product.precio}}</a>
+					<a>{{Product.account}}</a>
+					<a>{{Product.categoria}}</a>
+					<!--
 					<button class="color" mat-raised-button (click)="saveProduct(element)">Comprar</button>
+					-->
 				</div>
 			</section>
 		</div>

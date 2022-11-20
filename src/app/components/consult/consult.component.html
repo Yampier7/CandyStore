@@ -1,0 +1,55 @@
+<app-comprador></app-comprador>
+<mat-card>
+    <h2 class="alinear">Lista de Productos</h2>
+    <form [formGroup]="form" (submit)="search()">
+      <mat-tab-group #tab>
+        <mat-tab label="Buscar por Categoria">
+          <mat-form-field>
+            <input matInput placeholder="Categoria" formControlName="categoria" />
+          </mat-form-field>
+  
+        </mat-tab>
+        
+        <mat-tab label="Buscar por Nombre">
+          
+          <mat-form-field>
+            <input
+              matInput
+              placeholder="Ingrese nombre "
+              formControlName="title"
+            />
+          </mat-form-field>
+        </mat-tab>
+      </mat-tab-group>
+  
+      <button mat-raised-button color="primary" type="submit">Buscar</button>
+      
+     
+      <mat-table [dataSource]="dataSource">
+        <ng-container matColumnDef="product">
+          <mat-header-cell *matHeaderCellDef> Producto </mat-header-cell>
+          <mat-cell *matCellDef="let row">
+            {{ row.title | uppercase }}
+            </mat-cell>
+        </ng-container>
+  
+        <ng-container matColumnDef="category">
+          <mat-header-cell *matHeaderCellDef> Categoria </mat-header-cell>
+          <mat-cell *matCellDef="let row">
+            {{ row.categoria | uppercase }}</mat-cell
+          >
+        </ng-container>
+
+        <ng-container matColumnDef="precio">
+          <mat-header-cell *matHeaderCellDef> Precio </mat-header-cell>
+          <mat-cell *matCellDef="let row">
+            {{ row.precio | number }}</mat-cell
+          >
+        </ng-container>
+  
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+      </mat-table>
+    </form>
+  </mat-card>
+  

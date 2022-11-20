@@ -1,0 +1,22 @@
+<app-comprador></app-comprador>
+<div class="grafico">
+    
+    <!-- chart bar-->
+    <div class="chartContainer">
+      <canvas id="canvas-bar" width="400" height="400">
+        {{ chart }}
+      </canvas>
+    </div>
+    
+    <div  class="contenedor">
+    <p>Ver por Producto</p>
+    <button
+      mat-button
+      mat-raised-button
+      color="accent"
+      [routerLink]="['/home/estadistica',route.snapshot.paramMap.get('id')]"
+    >
+      Report
+    </button>
+    </div>
+  </div>

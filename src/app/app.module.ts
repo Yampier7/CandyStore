@@ -18,6 +18,11 @@ import { CarritoComponent } from './components/carrito/carrito.component';
 import { PerfilComponent } from './components/perfil/perfil.component';
 import { CompradorComponent } from './components/comprador/comprador.component';
 import { EditComponent } from './components/edit/edit.component';
+import { NewProductComponent } from './components/categorias/new-product/new-product.component';
+import { ConsultComponent } from './components/consult/consult.component';
+import { BarraComponent } from './components/comprador/barra/barra.component';
+import { ReportComponent } from './components/comprador/report/report.component';
+
 
 
 @NgModule({
@@ -34,6 +39,10 @@ import { EditComponent } from './components/edit/edit.component';
     PerfilComponent,
     CompradorComponent,
     EditComponent,
+    NewProductComponent,
+    ConsultComponent,
+    BarraComponent,
+    ReportComponent,
 
 
   ],
@@ -42,7 +51,8 @@ import { EditComponent } from './components/edit/edit.component';
     AppRoutingModule,
     AngularMaterialModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+   
   ],
 
   providers: [],

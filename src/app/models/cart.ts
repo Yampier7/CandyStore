@@ -1,9 +1,8 @@
-export interface Cart{
+export class Cart {
     id: number;
     title: string;
+    pais: string;
     precio: number;
-    pais:   string;
-    categoria: string;
-    url: string;
-
-}
+    category: string;
+    picture: any;
+  }

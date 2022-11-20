@@ -1,0 +1,91 @@
+<mat-card>
+    <h2 class="alinear">Registro de Producto</h2>
+    <form [formGroup]="myForm" autocomplete="off">
+      <div class="product-container">
+        <mat-form-field>
+          <input matInput placeholder="Nombre" formControlName="title" required />
+        </mat-form-field>
+  
+        <mat-form-field>
+          <input
+            matInput
+            type="number"
+            placeholder="Precio"
+            formControlName="precio"
+            required
+          />
+        </mat-form-field>
+  
+        <mat-form-field>
+          <input
+            matInput
+            placeholder="Pais"
+            formControlName="pais"
+            required
+          />
+        </mat-form-field>
+  
+        <!--<mat-form-field>
+          <mat-label>Categoría</mat-label>
+          <mat-select formControlName="categoria">
+            <mat-option *ngFor="let Product of products" [value]="Product.id">
+              {{ Product.categoria }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      -->
+        
+        <mat-form-field>
+          <input
+            matInput
+            placeholder="Categoria"
+            formControlName="categoria"
+            required
+          />
+        </mat-form-field>
+        
+        <mat-form-field>
+          <input
+            matInput
+            placeholder="Cantidad"
+            formControlName="account"
+            required
+          />
+        </mat-form-field>
+
+        <div>
+          <mat-label> Foto: </mat-label>
+          <label for="file-upload" class="subir"> Subir archivo </label>
+  
+          <input
+            id="file-upload"
+            accept="image/png, image/jpeg"
+            (change)="onFileChanged($event)"
+            type="file"
+            formControlName="picture"
+            class="input-file"
+          />
+          <span> {{ nameImg }}</span>
+        </div>
+  
+        <button class="bu1"
+          mat-raised-button
+          color="accent"
+          [disabled]="myForm.invalid"
+          type="button"
+          style="margin-left: 10 px"
+          (click)="saveProduct()"
+        >
+          Aceptar
+        </button>
+        <button class="bu2"
+          mat-raised-button
+          color="accent"
+          type="button"
+          [routerLink]="['/home/categorias',route.snapshot.paramMap.get('id')]"
+        >
+          Cancelar
+        </button>
+      </div>
+    </form>
+  </mat-card>

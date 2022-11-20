@@ -1,9 +1,9 @@
-export interface Product{
+export class Product {
     id: number;
     title: string;
+    pais: string;
     precio: number;
-    pais:   string;
+    account:number;
     categoria: string;
-    url: string;
-}
-
+    picture: any;
+  }

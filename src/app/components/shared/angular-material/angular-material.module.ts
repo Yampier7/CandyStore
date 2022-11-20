@@ -17,6 +17,11 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatListModule} from '@angular/material/list';
 import {MatSidenavModule} from '@angular/material/sidenav';
 
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatExpansionModule } from '@angular/material/expansion';
+
+
 @NgModule({
   declarations: [],
 
@@ -37,6 +42,9 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     MatDividerModule,
     MatListModule,
     MatSidenavModule,
+    MatDatepickerModule,
+    MatTabsModule,
+    MatExpansionModule,
   ],
 
   exports: [
@@ -55,6 +63,9 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     MatDividerModule,
     MatListModule,
     MatSidenavModule,
+    MatDatepickerModule,
+    MatTabsModule,
+    MatExpansionModule,
   ]
 
 })

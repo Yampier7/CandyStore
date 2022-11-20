@@ -1,3 +1,4 @@
+import { SessionUser } from './../../models/session-user';
 import { MatTableDataSource } from '@angular/material/table';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { User } from './../../models/user';
@@ -5,6 +6,7 @@ import { ActivatedRoute } from '@angular/router';
 
 import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/services/user.service';
+import { UserStorageService } from 'src/app/services/user-storage.service';
 
 @Component({
   selector: 'app-perfil',
@@ -19,19 +21,21 @@ export class PerfilComponent implements OnInit {
   title!: string;
   correo!:string;
   contra!:string;
-  user!:User;
-  
+user!:User;
 
+  
   
 
   constructor(
     private fb: FormBuilder,
     public route:ActivatedRoute,
     private userService:UserService,
+
   ) { }
 
   ngOnInit(): void {
-    this.loadUser();   
+    this.loadUser(); 
+    
   }
 
   loadUser() {

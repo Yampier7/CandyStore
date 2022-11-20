@@ -20,7 +20,7 @@ export class CarritoComponent implements OnInit {
   carts!:Cart[];
 
   displayedColumns: string[] = [
-    'url',
+    'picture',
     'title',  
     'precio',
     'action',

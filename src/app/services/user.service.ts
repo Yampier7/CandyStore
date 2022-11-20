@@ -1,3 +1,4 @@
+import { Login } from './../models/login';
 import { User } from './../models/user';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment.prod';
@@ -30,7 +31,9 @@ export class UserService {
 
 
 
-  
+  signIn(login: Login): any {
+    return this.http.post(`${this.basePath}users/signin`, login);
+  }
 
   
 

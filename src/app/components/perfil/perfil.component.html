@@ -3,22 +3,21 @@
     <h1>Mi Cuenta</h1>
     <div class="store-wrapper">
         <div class="category_list">
-            <a href="/home/perfil/{{idUser}}">Mi Cuenta</a>
+            
             <a href="/edit/{{idUser}}">Editar</a>
             <a href="/inicio">cerrar sesion</a>
         </div>
     </div>
 
-    <div class="contenedor">    
+    <div class="contenedor">
+        <img class="img" src="../../../assets/img/users.png" >    
         <div class="bloque">
             <h2 class="nombre">Nombre: {{ title }}</h2>       
         </div>
         <div class="bloque1">
             <h2 class="correo">Correo: {{ correo }}</h2>       
         </div>
-        <div class="bloque2">
-            <h2 class="contra">Contraseña: {{ contra }}</h2>       
-        </div>
+        
     </div>
     
 </div>
